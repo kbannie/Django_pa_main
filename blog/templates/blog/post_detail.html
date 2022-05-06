@@ -46,7 +46,11 @@
                     <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
                 </header>
                 <!-- Preview image figure-->
+                {% if post.head_image%}
                 <figure class="mb-4"><img class="img-fluid rounded" src="{{post.head_image.url}}" alt="..." /></figure>
+                {% else %}
+            <a href="#!"><img class="card-img-top" src="https://picsum.photos/seed/{{post.id}}/600/200" alt="..." /></a>
+            {% endif %}
                 <!-- Post content-->
                 <p>{{post.content}}</p>
             </article>
