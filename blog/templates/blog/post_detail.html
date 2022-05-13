@@ -11,6 +11,11 @@
     {% if post.hook_text %}
     <h5 class="text_muted">{{post.hook_text}}</h5>
     {% endif %}
+
+    <p class="lead">
+        by
+        <a href="#">{{ post.author | upper }}</a>
+    </p>
     <!-- Post meta content-->
     <div class="text-muted fst-italic mb-2">{{post.created_at}}</div>
     <!-- Post categories -->
